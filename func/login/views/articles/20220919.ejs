@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="20220908.css">
+    
+</head>
+<body>
+    
+        <h1 id="title" class="alert alert-danger">9/19 まなみさんとデートプランと新宿</h1>
+        <div id="events">
+            <p>
+              12時くらいに起きた！平和島駅近くの、かつやでごはん！かつ丼うめええええええ！豚汁もおいしい！
+              かえって、髭男きいたりデートプランを考えたり！
+              ネットで初デートについて調べたり話題考えたり介護職について調べたり！
+              新宿へ！周辺をうろうろしたり当日にどのルートを歩くか考えたり！
+              居酒屋さん、北丸へ！日本酒で潰れてしまった・・・！
+              おいしかった！角煮もお酒も！
+              居酒屋さんのあと、歌舞伎町とか、駅の改札とかうろうろ！
+              そのまま直帰してお風呂とか！
+              まなみさんとのLINE、楽しいー！
+              9/20になり、東京来て半年か・・・と考えた！
+            </p>
+
+        <h2 id="life" class="alert alert-primary">生活記録</div>
+        <h3 id="weight">体重 : 82kg</div>
+        <h3 id="eat">1000 + 5000</div>
+        <h2 id="money">6000</h2>
+        <div id=""></div>
+        <h2 id="schedule" class="alert alert-success">明日の予定</h2>
+            <div id="eat_schedule">
+                <p>朝ごはん : </p>
+                <p>昼ごはん : かえん</p>
+                <p>夜ごはん : カレーと、鶏肉やいたもの</p>
+            </div>
+            <ul>
+                <li>白湯・体操</li>
+                <li></li>
+                <li>お昼にコインランドリー</li>
+                <li>お米の買い出し、カレー具材の買い出し</li>
+                <li>夜、マチノマで買い出し</li>
+                <li>ジム</li>
+                <li>夜はGo言語の勉強！</li>
+            </ul>
+            <h2 id="schedule" class="alert alert-warning">学んだこと</h2>
+                <p>
+                  ----- golangのnet/httpパッケージで、リクエストで送られてきたJSONを読み取る方法 ------------
+                  まず、データ読み取り用の構造体を用意する.
+                  json.NewDecoder(req.Body)を呼び出す。デコードは暗号化などを施されたものを復元すること。NewDecoderの引数にはio.Reader型の変数？を渡す。
+                  io.Readerはストリームを扱うためのものである。リクエストのデータ量がでかすぎる場合も考えられるしメモリ効率を考えてストリームを使う。
+                  json.NewDecoder(req.Body).Decode(データ格納用構造体へのアドレス)で、デコード結果を構造体に格納できる。
+                  json.ってNewDecoderの前についてるから,「何のデータのデコードをするのか」を引数で指定しなくていい
+                  ストリームは、ある一定のメモリ量を使いながらデータを読み込む
+                  
+                  json.Marshalで構造体をjson形式に変更することも可能。Marshalは、整理の意
+                  -------- リクエストのクエリの読み取り方 --------------------------------------
+                  req.URL.Query()で読み取れる。なぜかメソッドの形になってる。
+                  
+                  
+                  formはいろいろな形式がある
+                  formを読み取るときはreq.ParseForm()を実行する。formの形式によってはreq.ParseMultipartForm()を使う
+                  ParseFormはreqオブジェクト？内のFormに値をセットする。
+                  ParseFormはリクエストの解析を行う。
+                  req.FormValue("Id")などで値を取り出せる.
+                  MIMEタイプの形式は「ファイルの分類/ファイルの種類」
+                  multipart/form-dataは、前述の通り複数の種類のデータを一度に扱える形式で、主な利用シーンはHTMLフォームです。特にファイルアップロードでよく利用されます
+                  boundary=----WebKitFormBoundaryO5quBRiT4G7Vm3R7という値が指定されていることがわかります。これはコンテンツの境界を示す文字列です。
+                  データ形式が複合型なので、1回の送信データでいくつかの種類のデータが含まれますが、
+                  それらを分けるために使います（具体的にはボディ部で使います）。この境界を示す文字列はリクエストごとに変わるため、
+                  手元で試した場合には別の文字列になります    
+                  
+                </p>
+              <h2 id="schedule" class="alert alert-warning">疑問点</h2>
+                <ul>
+                  <li>リクエストが来たときにまず、ログインしているかどうかを確かめるが、reqオブジェクトがセッションを持っているかどうかだけで判断するだけでいいのか</li>
+                  <li>app-formなんかちゃら形式の時はbody-parserを使う！</li>
+                  <li>セッションには何の情報を含めるべきか、含めないべきか</li>
+                  <li>トランザクションの使いどころ</li>
+                </ul>
+            <h2 id="schedule" class="alert alert-warning">その他</h2>
+            <ul>
+                <li>白湯を飲んだり運動したり、体温を高めると集中力が増すような。</li>
+                <li>最近、</li>
+            </ul>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>   
+
+           <!-- やることリスト -->
+           <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">やることリスト</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">アマゾン注文</a></li>
+              <li><a href="#">会社のマイナンバー</a></li>
+              <li><a href="#">結婚式の招待状</a></li>
+              <li>人と話すときの話題を考える！</li>
+            </ul>
+          </ul>
+
+
+          <!-- よかったこと -->
+          <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">よかったこと</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">ミホーク 35億</a></li>
+              <li><a href="#">リンクサブメニュー3-2</a></li>
+              <li><a href="#">リンクサブメニュー3-3</a></li>
+            </ul>
+          </ul>
+
+          <!-- 反省点 -->
+          <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">反省点</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">ミホーク 35億</a></li>
+              <li><a href="#">リンクサブメニュー3-2</a></li>
+              <li><a href="#">リンクサブメニュー3-3</a></li>
+            </ul>
+          </ul>
+
+          <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">ともだち</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">ミホーク 35億</a></li>
+              <li><a href="#">リンクサブメニュー3-2</a></li>
+              <li><a href="#">リンクサブメニュー3-3</a></li>
+            </ul>
+          </ul>
+        <form action = "localhost:8080">
+            <input type = "password" name = "password" placeholder="パスワード">
+        </form>
+    </body>
+</html>
