@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="20221008.css">
+    
+</head>
+<body>
+    
+        <h1 id="title" class="alert alert-danger"> 10/14 テストコードと代官山と中目黒</h1>
+        <div id="events">
+          <p>
+          今日はテストコード、テスト用のライブラリの勉強！
+          golangのinterfaceとかよくわからなくてハマってしまった！
+          mock, mockgenの使い方について勉強したり！
+          まずGOPATH binのパスが通ってなかったので通した！
+          
+          14時30分くらい、まいばすけっとでローストビーフを買ってきた！
+          Go言語の、JSONというか構造体の初期化でハマってしまった！
+          レスポンスで返ってくるユーザー情報のjsonの構造が面倒くさい！
+          構造体を、名前なしで初期化しようとしてたり！
+          
+          mockgen -source= -destination=で、sourceにinterfaceのあるファイルを指定するとmockがつくられる。
+          で、testプログラムの方でそのmock用のプログラムをimportして、Newしてmockを生成する！
+          mockを、戻り値とか条件を設定したのち、テスト対象となるインスタンスに注入する。
+          
+          夕会、17時からだった！投野さんにtearDownとsetupについて教えてもらった！テストの最初に実行する関数的な。
+          
+          夜、恵比寿で降りて代官山へ！
+          歩いた！
+          小道が多いな・・・！
+          おおお！なんかちょこちょこおしゃれなお店がある！ヘアーサロンとか多い感じ！
+          蔦屋書店はいった！周辺が木々で緑でおしゃれだし店内もめっちゃおしゃれ！てか意識たかそうなおしゃれな人しかおらん！
+          すごく雰囲気よかった！
+          蔦屋書店のある通りも、なんか奇麗だしおしゃれだし、緑と道路の感じが調和してた！
+          おしゃれなだけでなく雰囲気がいい！
+          なんか文に表しづらい・・・！
+          銀座あたりと比べると、まだ庶民の味方的なオシャレ街！
+          
+          中目黒へ！なんか・・・「出会って」しまった感・・・！広々とした道！ちょっと東京の中心からは外れたところに思わぬ
+          街を見つけてしまった驚きとワクワク感。
+          自分でもなんでこんなにいいと感じるのかわからないけど、中目黒めっちゃいい！！！ってなった！
+          
+          うろうろしたあと、らぁめんはやし田へ！店内の雰囲気も店員さんも温かかったし、まぜそばめっちゃ美味しかった！
+          バターの香りがすごくいい！バターを活かしたまぜそば・・・！おいしかった！大満足！
+          そのあと恵比寿 行って品川へ！
+          恵比寿のアトレ歩いた！
+          
+          httptestを使う場合は、
+          1.テスト用のサーバーを作成する
+          2.そのサーバーのハンドラとして、テスト対象の関数をセットする
+          3.httptestの機能で、テスト用に作成したサーバーに対してGETリクエストを飛ばす。このとき、テストケースとして
+          考案した入力値(クエリパラメータ）を渡す！
+          4.レスポンスはテキスト形式なのでJSONに直す
+          
+          // テストコード自体も修正しやすいものにする
+          // 1つのテストで多くのことをわかるようにする
+          // テストはなるべく少なく効果的に！最小十分を目指す！
+          // なぜres.BodyをCloseするのか
+          5.assertにかける
+          </p>
+
+        <h2 id="life" class="alert alert-primary">生活記録</div>
+        <h3 id="weight">体重 : 81.2kg</div>
+        <h3 id="eat"></div>
+        <h2 id="money"></h2>
+        <div id=""></div>
+        <h2 id="schedule" class="alert alert-success">明日の予定</h2>
+            <div id="eat_schedule">
+                <p>朝ごはん : </p>
+                <p>昼ごはん : かえん</p>
+                <p>夜ごはん : カレーと、鶏肉やいたもの</p>
+            </div>
+            <ul>
+                <li>白湯・体操</li>
+                <li></li>
+                <li>21時から振り返りタイム</li>
+                <li>マイナンバー</li>
+            </ul>
+            <h2 id="schedule" class="alert alert-warning">学んだこと</h2>
+                <p>
+                  大文字・小文字のスコープはpackage単位！
+                  MySQLの暗黙の型変換に注意する！
+                  panicは、本当にどうしようもないときプログラムを止めるために使う！例外ではない！
+                  golangではuint8とか使える！
+                  
+                </p>
+              <h2 id="schedule" class="alert alert-warning">疑問点</h2>
+                <ul>
+                  <li>リクエストが来たときにまず、ログインしているかどうかを確かめるが、reqオブジェクトがセッションを持っているかどうかだけで判断するだけでいいのか</li>
+                  <li>app-formなんかちゃら形式の時はbody-parserを使う！</li>
+                  <li>セッションには何の情報を含めるべきか、含めないべきか</li>
+                  <li>トランザクションの使いどころ</li>
+                </ul>
+            <h2 id="schedule" class="alert alert-warning">その他</h2>
+            <ul>
+                <li>白湯を飲んだり運動したり、体温を高めると集中力が増すような。</li>
+                <li>最近、</li>
+            </ul>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>   
+
+           <!-- やることリスト -->
+           <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">やることリスト</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">アマゾン注文</a></li>
+              <li><a href="#">会社のマイナンバー</a></li>
+              <li><a href="#">結婚式の招待状</a></li>
+              <li>人と話すときの話題を考える！</li>
+            </ul>
+          </ul>
+
+
+          <!-- よかったこと -->
+          <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">よかったこと</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">ミホーク 35億</a></li>
+              <li><a href="#">リンクサブメニュー3-2</a></li>
+              <li><a href="#">リンクサブメニュー3-3</a></li>
+            </ul>
+          </ul>
+
+          <!-- 反省点 -->
+          <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">反省点</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">ミホーク 35億</a></li>
+              <li><a href="#">リンクサブメニュー3-2</a></li>
+              <li><a href="#">リンクサブメニュー3-3</a></li>
+            </ul>
+          </ul>
+
+          <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">ともだち</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">ミホーク 35億</a></li>
+              <li><a href="#">リンクサブメニュー3-2</a></li>
+              <li><a href="#">リンクサブメニュー3-3</a></li>
+            </ul>
+          </ul>
+        <form action = "localhost:8080">
+            <input type = "password" name = "password" placeholder="パスワード">
+        </form>
+    </body>
+</html>
