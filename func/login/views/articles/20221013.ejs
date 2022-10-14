@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="20221008.css">
+    
+</head>
+<body>
+    
+        <h1 id="title" class="alert alert-danger"> 10/13 テストコードと計画会と画面実装</h1>
+        <div id="events">
+          <p>
+          今日はユーザー検索画面とログイン画面のコードの修正をした！
+          朝、寺澤さんとスラムダンクの話をした！
+          昼、栄屋丸へ！まかないうどんおいしい！
+          14時から、これからどうするかって計画会！
+          テストコードを優先的にすることになった！
+          思ったよりクオリティ高いとか、実装した画面みせたらみなさん驚いてくれて嬉しかった
+          そのあと、テストケースの洗い出しについて考えた！
+          夕会のとき、1時間くらい原園さんがmockとか、テストしやすいコードとかinterfaceについて教えてくださった！
+          
+          なんか疲れたので1時間くらいダラダラ！
+          夜、かえんでごはん！
+          
+          気温が・・・！寒い！
+          
+          そのあと家でテストコードについて勉強！
+          testingフレームワークとかhttptestフレームワークとか使った！
+          1時あたりに寝た！
+          ちーちゃんとみっちゃんにも実装したアプリの画面をみせた！
+          </p>
+
+        <h2 id="life" class="alert alert-primary">生活記録</div>
+        <h3 id="weight">体重 : 81.2kg</div>
+        <h3 id="eat"></div>
+        <h2 id="money"></h2>
+        <div id=""></div>
+        <h2 id="schedule" class="alert alert-success">明日の予定</h2>
+            <div id="eat_schedule">
+                <p>朝ごはん : </p>
+                <p>昼ごはん : かえん</p>
+                <p>夜ごはん : カレーと、鶏肉やいたもの</p>
+            </div>
+            <ul>
+                <li>白湯・体操</li>
+                <li></li>
+                <li>21時から振り返りタイム</li>
+                <li>マイナンバー</li>
+            </ul>
+            <h2 id="schedule" class="alert alert-warning">学んだこと</h2>
+                <p>
+                  大文字・小文字のスコープはpackage単位！
+                  MySQLの暗黙の型変換に注意する！
+                  panicは、本当にどうしようもないときプログラムを止めるために使う！例外ではない！
+                  golangではuint8とか使える！
+                  
+                </p>
+              <h2 id="schedule" class="alert alert-warning">疑問点</h2>
+                <ul>
+                  <li>リクエストが来たときにまず、ログインしているかどうかを確かめるが、reqオブジェクトがセッションを持っているかどうかだけで判断するだけでいいのか</li>
+                  <li>app-formなんかちゃら形式の時はbody-parserを使う！</li>
+                  <li>セッションには何の情報を含めるべきか、含めないべきか</li>
+                  <li>トランザクションの使いどころ</li>
+                </ul>
+            <h2 id="schedule" class="alert alert-warning">その他</h2>
+            <ul>
+                <li>白湯を飲んだり運動したり、体温を高めると集中力が増すような。</li>
+                <li>最近、</li>
+            </ul>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>   
+
+           <!-- やることリスト -->
+           <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">やることリスト</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">アマゾン注文</a></li>
+              <li><a href="#">会社のマイナンバー</a></li>
+              <li><a href="#">結婚式の招待状</a></li>
+              <li>人と話すときの話題を考える！</li>
+            </ul>
+          </ul>
+
+
+          <!-- よかったこと -->
+          <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">よかったこと</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">ミホーク 35億</a></li>
+              <li><a href="#">リンクサブメニュー3-2</a></li>
+              <li><a href="#">リンクサブメニュー3-3</a></li>
+            </ul>
+          </ul>
+
+          <!-- 反省点 -->
+          <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">反省点</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">ミホーク 35億</a></li>
+              <li><a href="#">リンクサブメニュー3-2</a></li>
+              <li><a href="#">リンクサブメニュー3-3</a></li>
+            </ul>
+          </ul>
+
+          <ul id="accordion_menu">
+            <li>
+              <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">ともだち</a>
+            </li>
+            <ul id="menu03" class="collapse bg-dark" data-parent="#accordion_menu">
+              <li><a href="#">ミホーク 35億</a></li>
+              <li><a href="#">リンクサブメニュー3-2</a></li>
+              <li><a href="#">リンクサブメニュー3-3</a></li>
+            </ul>
+          </ul>
+        <form action = "localhost:8080">
+            <input type = "password" name = "password" placeholder="パスワード">
+        </form>
+    </body>
+</html>
